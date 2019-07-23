@@ -4,6 +4,7 @@ import './App.css'
 import Nav from './Nav.js'
 import Home from './Home.js'
 import Page from './Page.js'
+import TestComponent from './TestComponet.js'
 import './sass/main.scss'
 import './css/main.css'
 import mdglogo from './images/mdgblack.png'
@@ -18,16 +19,16 @@ function App() {
     <Router>
       <header class="v-header container">
         <div class="fullscreen-video-wrap">
-         <ReactPlayer   url={bgwhite}
-             
-              playing="playing"
-              autoPlay="true"
-              controls="false"
-              playsinline = "true"
-              muted="true"
-              loop="true"/>
-        
-        </div>
+        <TestComponent
+            playsInline={true}
+       
+            src={bgwhite}
+            poster={'http://il6.picdn.net/shutterstock/videos/3548084/thumb/1.jpg?i10c=img.resize(height:160)'}
+           
+            startTime={10}
+            autoPlay={true}
+            volume={0.5}
+          /> /</div>
 
         <div class="header-content">
           <img src={mdglogo} className="App-logo" />
