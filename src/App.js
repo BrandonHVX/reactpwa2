@@ -19,6 +19,7 @@ function App() {
         <div class="fullscreen-video-wrap">
           <video
             src={bgwhite}
+            playsInline="true"
             class="videoInsert"
             autoplay="true"
             loop="true"
