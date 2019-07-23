@@ -21,7 +21,9 @@ function App() {
          <ReactPlayer   url={bgwhite}
              
               playing="playing"
-             
+              controls="false"
+              playsinline = "true"
+              muted="true"
               loop="true"/>
         
         </div>
