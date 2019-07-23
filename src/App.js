@@ -17,14 +17,15 @@ function App() {
     <Router>
       <header class="v-header container">
         <div class="fullscreen-video-wrap">
-          <video
+          <video loop autoplay controls="true"
             src={bgwhite}
-            playsInline="true"
+           
             class="videoInsert"
-            autoplay="true"
-            loop="true"
-            muted="true"
-          />
+        
+            type="video/mp4"
+          >
+
+          </video>
         </div>
 
         <div class="header-content">
