@@ -11,21 +11,19 @@ import mdgbg from './images/mdgbg.mp4'
 import bgwhite from './images/bgwhite.mp4'
 import pic01 from './images/pic01.jpg'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import ReactPlayer from 'react-player'
 
 function App() {
   return (
     <Router>
       <header class="v-header container">
         <div class="fullscreen-video-wrap">
-          <video loop autoplay controls="true"
-            src={bgwhite}
-           
-            class="videoInsert"
+         <ReactPlayer   url={bgwhite}
+             
+              playing="playing"
+             
+              loop="true"/>
         
-            type="video/mp4"
-          >
-
-          </video>
         </div>
 
         <div class="header-content">
