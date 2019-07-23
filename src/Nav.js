@@ -3,51 +3,54 @@ import Page from './Page'
 import Home from './Page'
 import './sass/main.scss'
 import './css/main.css'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+
+import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 
 export default function Nav() {
   return (
     <Router>
-      <div id="nav">
-        <ul class="links">
-          <Link to="home">
-            {' '}
-            <li class="active">
-              <a>This is Massively</a>
-            </li>
-          </Link>
-
-          <Link to="page">
-            {' '}
-            <li>
+      <Nav>
+        <div id="nav">
+          <ul class="links">
+            <NavLink exact={true} activeClassName="is-active" to="home">
               {' '}
-              <a>Generic Page</a>
+              <li class="active">
+                <a>This is Massively</a>
+              </li>
+            </NavLink>
+
+            <NavLink to="page">
+              {' '}
+              <li class="active">
+                {' '}
+                <a>Generic Page</a>
+              </li>
+            </NavLink>
+          </ul>
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter">
+                <span class="label">Twitter</span>
+              </a>
             </li>
-          </Link>
-        </ul>
-        <ul class="icons">
-          <li>
-            <a href="#" class="icon brands fa-twitter">
-              <span class="label">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-facebook-f">
-              <span class="label">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-instagram">
-              <span class="label">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-github">
-              <span class="label">GitHub</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f">
+                <span class="label">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram">
+                <span class="label">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-github">
+                <span class="label">GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </Nav>
       <Route exact path="/" component={Main} />
       <Route path="/page" component={Page} />
     </Router>

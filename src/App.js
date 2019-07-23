@@ -4,31 +4,67 @@ import './App.css'
 import Nav from './Nav.js'
 import Home from './Home.js'
 import Page from './Page.js'
-import TestComponent from './TestComponet.js'
+import Events from './Events.js'
+import Shop from './Shop.js'
+import Sign from './SignUp.js'
 import './sass/main.scss'
 import './css/main.css'
 import mdglogo from './images/mdgblack.png'
 import mdgbg from './images/mdgbg.mp4'
 import bgwhite from './images/bgwhite.mp4'
 import pic01 from './images/pic01.jpg'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import ReactPlayer from 'react-player'
+import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 
 function App() {
   return (
     <Router>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger">
+          <div />
+        </div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li>
+                  <a>
+                    <Link to="/"> Home</Link>{' '}
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <Link to="/page">About </Link>{' '}
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <Link to="/events">Events</Link>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    {' '}
+                    <Link to="/shop"> Shop</Link>{' '}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <header class="v-header container">
         <div class="fullscreen-video-wrap">
-        <TestComponent
-            playsInline={true}
-       
+          <video
             src={bgwhite}
-            poster={'http://il6.picdn.net/shutterstock/videos/3548084/thumb/1.jpg?i10c=img.resize(height:160)'}
-           
-            startTime={10}
-            autoPlay={true}
-            volume={0.5}
-          /> /</div>
+            playsInline="true"
+            class="videoInsert"
+            autoplay="true"
+            loop="true"
+            muted="true"
+            type="video/mp4"
+          />
+        </div>
 
         <div class="header-content">
           <img src={mdglogo} className="App-logo" />
@@ -37,39 +73,54 @@ function App() {
 
       <div id="nav">
         <ul class="links">
+          {' '}
           <Link to="/">
             {' '}
-            <li class="active">
-              <a>This is Massively</a>
+            <li>
+              <a> Home</a>
             </li>
           </Link>
-
           <Link to="page">
-            {' '}
             <li>
-              {' '}
-              <a>Generic Page</a>
+              <a> About</a>{' '}
+            </li>
+          </Link>
+          <Link to="events">
+            <li>
+              <a> Events</a>{' '}
+            </li>
+          </Link>
+          <Link to="shop">
+            <li>
+              <a> Shop</a>{' '}
+            </li>
+          </Link>
+          <Link to="sign">
+            <li>
+              <a> SignUp</a>{' '}
             </li>
           </Link>
         </ul>
         <ul class="icons">
           <li>
-            <a href="#" class="icon brands fa-twitter">
+            <a
+              href="http://www.twitter.com/milqdagame"
+              class="icon brands fa-twitter"
+            >
               <span class="label">Twitter</span>
             </a>
           </li>
+
           <li>
-            <a href="#" class="icon brands fa-facebook-f">
-              <span class="label">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-instagram">
+            <a
+              href="http://www.instagram.com/milqdagame"
+              class="icon brands fa-instagram"
+            >
               <span class="label">Instagram</span>
             </a>
           </li>
           <li>
-            <a href="#" class="icon brands fa-github">
+            <a href="#" class="icon brands fa-envelope">
               <span class="label">GitHub</span>
             </a>
           </li>
@@ -78,6 +129,9 @@ function App() {
 
       <Route exact path="/" component={Home} />
       <Route path="/page" component={Page} />
+      <Route path="/events" component={Events} />
+      <Route path="/shop" component={Shop} />
+      <Route path="/sign" component={Sign} />
     </Router>
   )
 }
