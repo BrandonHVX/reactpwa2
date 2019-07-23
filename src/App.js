@@ -21,6 +21,7 @@ function App() {
          <ReactPlayer   url={bgwhite}
              
               playing="playing"
+              autoPlay="true"
               controls="false"
               playsinline = "true"
               muted="true"
