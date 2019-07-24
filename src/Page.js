@@ -3,177 +3,160 @@ import Nav from './Nav.js'
 import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 import MenuBar from './MenuBar.js'
 import Sidebar from './Sidebar.js'
+import { directive } from '@babel/types'
 
 export default function Page() {
   return (
     <div>
       {' '}
-      <body class="is-preload">
+      <div>
         {' '}
-        <div id="wrapper">
-          <Sidebar />
-          <div id="intro">
-            <h1>
-              This is
-              <br />
-              Massively
-            </h1>
-            <p>
-              A free, fully responsive HTML5 + CSS3 site template designed by{' '}
-              <a href="https://twitter.com/ajlkn">@ajlkn</a> for{' '}
-              <a href="https://html5up.net">HTML5 UP</a>
-              <br />
-              and released for free under the{' '}
-              <a href="https://html5up.net/license">Creative Commons license</a>
-              .
-            </p>
-
-            <ul class="actions">
-              <li>
-                <a
-                  href="#header"
-                  class="button icon solid solo fa-arrow-down scrolly"
-                >
-                  Continue
-                </a>
-              </li>
-            </ul>
-          </div>
-          <MenuBar />
-          <div id="main">
-            <section class="post">
-              <header class="major">
-                <span class="date">April 25, 2017</span>
-                <h1>Generic Page</h1>
-                <p>
-                  Aenean ornare velit lacus varius enim ullamcorper proin
-                  aliquam
-                  <br />
-                  facilisis ante sed etiam magna interdum congue. Lorem ipsum
-                  dolor
-                  <br />
-                  amet nullam sed etiam veroeros.
-                </p>
-              </header>
-              <div class="image main">
-                <img src="images/pic01.jpg" alt="" />
-              </div>
-              <p>
-                Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
-                primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
-                mattis sagittis. Praesent rutrum sem diam, vitae egestas enim
-                auctor sit amet. Pellentesque leo mauris, consectetur id ipsum
-                sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada
-                et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar
-                mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in
-                lectus. Pellentesque habitant morbi tristique senectus et netus
-                et malesuada fames ac turpis egestas. Curabitur sapien risus,
-                commodo eget turpis at, elementum convallis enim turpis, lorem
-                ipsum dolor sit amet nullam.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Etiam
-                tristique libero eu nibh porttitor fermentum. Nullam venenatis
-                erat id vehicula viverra. Nunc ultrices eros ut ultricies
-                condimentum. Mauris risus lacus, blandit sit amet venenatis non,
-                bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam
-                at, euismod in lectus. Pellentesque habitant morbi tristique
-                senectus et netus et malesuada fames ac turpis egestas. In non
-                lorem sit amet elit placerat maximus. Pellentesque aliquam
-                maximus risus. Donec eget ex magna. Interdum et malesuada fames
-                ac ante ipsum primis in faucibus. Pellentesque venenatis dolor
-                imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae
-                egestas enim auctor sit amet. Pellentesque leo mauris,
-                consectetur id ipsum.
-              </p>
-            </section>
-          </div>
-
-          <footer id="footer">
-            <section>
-              <form method="post" action="#">
-                <div class="fields">
-                  <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
-                  </div>
-                  <div class="field">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" />
-                  </div>
-                  <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="3" />
-                  </div>
+        <body class="is-preload">
+          {' '}
+          <div id="wrapper">
+            <Sidebar />
+            <header class="v-header container">
+              {' '}
+              <div class="fullscreen-video-wrap"> </div>
+              <div class="header-content"> </div>
+            </header>
+            <MenuBar />
+            <div id="main">
+              <section class="post">
+                <header class="major">
+                  <span class="date">April 25, 2017</span>
+                  <h1>Generic Page</h1>
+                  <p>
+                    Aenean ornare velit lacus varius enim ullamcorper proin
+                    aliquam
+                    <br />
+                    facilisis ante sed etiam magna interdum congue. Lorem ipsum
+                    dolor
+                    <br />
+                    amet nullam sed etiam veroeros.
+                  </p>
+                </header>
+                <div class="image main">
+                  <img src="images/pic01.jpg" alt="" />
                 </div>
-                <ul class="actions">
-                  <li>
-                    <input type="submit" value="Send Message" />
-                  </li>
-                </ul>
-              </form>
-            </section>
-            <section class="split contact">
-              <section class="alt">
-                <h3>Address</h3>
                 <p>
-                  1234 Somewhere Road #87257
-                  <br />
-                  Nashville, TN 00000-0000
+                  Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
+                  primis in faucibus. Pellentesque venenatis dolor imperdiet
+                  dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas
+                  enim auctor sit amet. Pellentesque leo mauris, consectetur id
+                  ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia
+                  malesuada et a elit. Donec urna ex, lacinia in purus ac,
+                  pretium pulvinar mauris. Nunc lorem mauris, fringilla in
+                  aliquam at, euismod in lectus. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis
+                  egestas. Curabitur sapien risus, commodo eget turpis at,
+                  elementum convallis enim turpis, lorem ipsum dolor sit amet
+                  nullam.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  dapibus rutrum facilisis. Class aptent taciti sociosqu ad
+                  litora torquent per conubia nostra, per inceptos himenaeos.
+                  Etiam tristique libero eu nibh porttitor fermentum. Nullam
+                  venenatis erat id vehicula viverra. Nunc ultrices eros ut
+                  ultricies condimentum. Mauris risus lacus, blandit sit amet
+                  venenatis non, bibendum vitae dolor. Nunc lorem mauris,
+                  fringilla in aliquam at, euismod in lectus. Pellentesque
+                  habitant morbi tristique senectus et netus et malesuada fames
+                  ac turpis egestas. In non lorem sit amet elit placerat
+                  maximus. Pellentesque aliquam maximus risus. Donec eget ex
+                  magna. Interdum et malesuada fames ac ante ipsum primis in
+                  faucibus. Pellentesque venenatis dolor imperdiet dolor mattis
+                  sagittis. Praesent rutrum sem diam, vitae egestas enim auctor
+                  sit amet. Pellentesque leo mauris, consectetur id ipsum.
                 </p>
               </section>
-              <section>
-                <h3>Phone</h3>
-                <p>
-                  <a href="#">(000) 000-0000</a>
-                </p>
-              </section>
-              <section>
-                <h3>Email</h3>
-                <p>
-                  <a href="#">info@untitled.tld</a>
-                </p>
-              </section>
-              <section>
-                <h3>Social</h3>
-                <ul class="icons alt">
-                  <li>
-                    <a href="#" class="icon brands alt fa-twitter">
-                      <span class="label">Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands alt fa-facebook-f">
-                      <span class="label">Facebook</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands alt fa-instagram">
-                      <span class="label">Instagram</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands alt fa-github">
-                      <span class="label">GitHub</span>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-            </section>
-          </footer>
+            </div>
 
-          <div id="copyright">
-            <ul>
-              <li>&copy; Untitled</li>
-              <li>
-                Design: <a href="https://html5up.net">HTML5 UP</a>
-              </li>
-            </ul>
+            <footer id="footer">
+              <section>
+                <form method="post" action="#">
+                  <div class="fields">
+                    <div class="field">
+                      <label for="name">Name</label>
+                      <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="field">
+                      <label for="email">Email</label>
+                      <input type="text" name="email" id="email" />
+                    </div>
+                    <div class="field">
+                      <label for="message">Message</label>
+                      <textarea name="message" id="message" rows="3" />
+                    </div>
+                  </div>
+                  <ul class="actions">
+                    <li>
+                      <input type="submit" value="Send Message" />
+                    </li>
+                  </ul>
+                </form>
+              </section>
+              <section class="split contact">
+                <section class="alt">
+                  <h3>Address</h3>
+                  <p>
+                    1234 Somewhere Road #87257
+                    <br />
+                    Nashville, TN 00000-0000
+                  </p>
+                </section>
+                <section>
+                  <h3>Phone</h3>
+                  <p>
+                    <a href="#">(000) 000-0000</a>
+                  </p>
+                </section>
+                <section>
+                  <h3>Email</h3>
+                  <p>
+                    <a href="#">info@untitled.tld</a>
+                  </p>
+                </section>
+                <section>
+                  <h3>Social</h3>
+                  <ul class="icons alt">
+                    <li>
+                      <a href="#" class="icon brands alt fa-twitter">
+                        <span class="label">Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="icon brands alt fa-facebook-f">
+                        <span class="label">Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="icon brands alt fa-instagram">
+                        <span class="label">Instagram</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="icon brands alt fa-github">
+                        <span class="label">GitHub</span>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </footer>
+
+            <div id="copyright">
+              <ul>
+                <li>&copy; Untitled</li>
+                <li>
+                  Design: <a href="https://html5up.net">HTML5 UP</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </body>
+        </body>
+      </div>
     </div>
   )
 }
