@@ -13,10 +13,10 @@
 }
 
 
-
 .home-flexbox {
 
   justify-content: center;
+ 
 }
 
 .homeimage {
@@ -29,6 +29,19 @@ width: 100vw;
 }
 
 
+.navlist  {
+  padding: 15px;
+  color: blueviolet;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+  
+
+}
+
+
+
+
 
 @media (min-width: 900px) {
   
@@ -39,8 +52,27 @@ width: 100vw;
   
   .homeimage {
     width: 25%;
+
+    
     
   }
+
+
+
+  .btn-gone{
+    display: none;
+  }
+
+
+
+  .toggle{ display: block; }
+  
+ .button{ display: none; }
+  
+
+
+
+
 
 
 .menu-wrap .menu > div > div > ul > li {

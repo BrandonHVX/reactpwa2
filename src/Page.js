@@ -1,19 +1,50 @@
 import React from 'react'
 import Nav from './Nav.js'
+import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
+import MenuBar from './MenuBar.js'
+import Sidebar from './Sidebar.js'
 
 export default function Page() {
   return (
     <div>
+      {' '}
       <body class="is-preload">
+        {' '}
         <div id="wrapper">
+          <Sidebar />
+          <div id="intro">
+            <h1>
+              This is
+              <br />
+              Massively
+            </h1>
+            <p>
+              A free, fully responsive HTML5 + CSS3 site template designed by{' '}
+              <a href="https://twitter.com/ajlkn">@ajlkn</a> for{' '}
+              <a href="https://html5up.net">HTML5 UP</a>
+              <br />
+              and released for free under the{' '}
+              <a href="https://html5up.net/license">Creative Commons license</a>
+              .
+            </p>
+
+            <ul class="actions">
+              <li>
+                <a
+                  href="#header"
+                  class="button icon solid solo fa-arrow-down scrolly"
+                >
+                  Continue
+                </a>
+              </li>
+            </ul>
+          </div>
+          <MenuBar />
           <div id="main">
             <section class="post">
               <header class="major">
                 <span class="date">April 25, 2017</span>
-                <h1>
-                  This is a<br />
-                  Generic Page
-                </h1>
+                <h1>Generic Page</h1>
                 <p>
                   Aenean ornare velit lacus varius enim ullamcorper proin
                   aliquam
@@ -142,14 +173,6 @@ export default function Page() {
             </ul>
           </div>
         </div>
-
-        <script src="assets/js/jquery.min.js" />
-        <script src="assets/js/jquery.scrollex.min.js" />
-        <script src="assets/js/jquery.scrolly.min.js" />
-        <script src="assets/js/browser.min.js" />
-        <script src="assets/js/breakpoints.min.js" />
-        <script src="assets/js/util.js" />
-        <script src="assets/js/main.js" />
       </body>
     </div>
   )

@@ -40,6 +40,7 @@ body {
 	padding-right: 1rem;
 	margin: auto;
 	text-align: center;
+	z-index: -3;
 }
 
 .fullscreen-video-wrap {
@@ -48,12 +49,14 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100vh;
+	z-index: -3;
 	overflow: hidden;
 }
 
 .fullscreen-video-wrap video {
 	min-width: 100%;
 	min-height: 100%;
+	position: fixed;
 }
 
 .header-overlay {
@@ -68,14 +71,14 @@ body {
 }
 
 .header-content {
-	z-index: 2;
+	z-index: 0;
 	justify-content: center;
 }
 
 
 .header-content img{
-	z-index: 2;
-	
+	z-index: -1;
+position: static;
 	width: 50%;
 }
 .videoInsert {
@@ -2318,8 +2321,8 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 2px #212931;
-		color: #212931 !important;
+		box-shadow: inset 0 0 0 0px #212931;
+		color: #121111 !important;
 	}
 
 		input[type="submit"]:hover,

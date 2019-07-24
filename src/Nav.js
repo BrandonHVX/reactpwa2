@@ -12,178 +12,60 @@ export default function Nav() {
       <Nav>
         <div id="nav">
           <ul class="links">
-            <NavLink exact={true} activeClassName="is-active" to="home">
+            {' '}
+            <Link to="/">
               {' '}
-              <li class="active">
-                <a>This is Massively</a>
+              <li>
+                <a> Home</a>
               </li>
-            </NavLink>
-
-            <NavLink to="page">
-              {' '}
-              <li class="active">
-                {' '}
-                <a>Generic Page</a>
+            </Link>
+            <Link to="page">
+              <li>
+                <a> About</a>{' '}
               </li>
-            </NavLink>
+            </Link>
+            <Link to="events">
+              <li>
+                <a> Events</a>{' '}
+              </li>
+            </Link>
+            <Link to="shop">
+              <li>
+                <a> Shop</a>{' '}
+              </li>
+            </Link>
+            <Link to="sign">
+              <li>
+                <a> SignUp</a>{' '}
+              </li>
+            </Link>
           </ul>
           <ul class="icons">
             <li>
-              <a href="#" class="icon brands fa-twitter">
+              <a
+                href="http://www.twitter.com/milqdagame"
+                class="icon brands fa-twitter"
+              >
                 <span class="label">Twitter</span>
               </a>
             </li>
+
             <li>
-              <a href="#" class="icon brands fa-facebook-f">
-                <span class="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="icon brands fa-instagram">
+              <a
+                href="http://www.instagram.com/milqdagame"
+                class="icon brands fa-instagram"
+              >
                 <span class="label">Instagram</span>
               </a>
             </li>
             <li>
-              <a href="#" class="icon brands fa-github">
+              <a href="#" class="icon brands fa-envelope">
                 <span class="label">GitHub</span>
               </a>
             </li>
           </ul>
         </div>
       </Nav>
-      <Route exact path="/" component={Main} />
-      <Route path="/page" component={Page} />
     </Router>
-  )
-}
-
-function Main() {
-  return (
-    <div>
-      <a href="index.html" class="logo">
-        Massively
-      </a>
-
-      <div id="main">
-        <article class="post featured">
-          <header class="major">
-            <span class="date">April 25, 2017</span>
-            <h2>
-              <a href="#">
-                And this is a<br />
-                massive headline
-              </a>
-            </h2>
-            <p>
-              Aenean ornare velit lacus varius enim ullamcorper proin aliquam
-              <br />
-              facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor
-              <br />
-              amet nullam sed etiam veroeros.
-            </p>
-          </header>
-          <a href="#" class="image main">
-            <img src="images/pic01.jpg" alt="" />
-          </a>
-          <ul class="actions special">
-            <li>
-              <a href="#" class="button large">
-                Full Story
-              </a>
-            </li>
-          </ul>
-        </article>
-      </div>
-
-      <footer id="footer">
-        <section>
-          <form method="post" action="#">
-            <div class="fields">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="3" />
-              </div>
-            </div>
-            <ul class="actions">
-              <li>
-                <input type="submit" value="Send Message" />
-              </li>
-            </ul>
-          </form>
-        </section>
-        <section class="split contact">
-          <section class="alt">
-            <h3>Address</h3>
-            <p>
-              1234 Somewhere Road #87257
-              <br />
-              Nashville, TN 00000-0000
-            </p>
-          </section>
-          <section>
-            <h3>Phone</h3>
-            <p>
-              <a href="#">(000) 000-0000</a>
-            </p>
-          </section>
-          <section>
-            <h3>Email</h3>
-            <p>
-              <a href="#">info@untitled.tld</a>
-            </p>
-          </section>
-          <section>
-            <h3>Social</h3>
-            <ul class="icons alt">
-              <li>
-                <a href="#" class="icon brands alt fa-twitter">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands alt fa-facebook-f">
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands alt fa-instagram">
-                  <span class="label">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands alt fa-github">
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-      </footer>
-
-      <div id="copyright">
-        <ul>
-          <li>&copy; Untitled</li>
-          <li>
-            Design: <a href="https://html5up.net">HTML5 UP</a>
-          </li>
-        </ul>
-      </div>
-
-      <script src="assets/js/jquery.min.js" />
-      <script src="assets/js/jquery.scrollex.min.js" />
-      <script src="assets/js/jquery.scrolly.min.js" />
-      <script src="assets/js/browser.min.js" />
-      <script src="assets/js/breakpoints.min.js" />
-      <script src="assets/js/util.js" />
-      <script src="assets/js/main.js" />
-    </div>
   )
 }
