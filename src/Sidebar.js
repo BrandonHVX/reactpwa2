@@ -6,8 +6,8 @@ import SidebarLayout from './SidebarLayout'
 import { CSSTransitionGroup } from 'react-transition-group'
 import MaterialTitlePanel from './material_title_panel'
 import SidebarContent from './SidebarContent'
-const mql = window.matchMedia(`(max-width: 980px)`)
 
+const mql = window.matchMedia(`(max-width: 980px)`)
 const styles = {
   contentHeaderMenuLink: {
     textDecoration: 'none',
@@ -16,12 +16,17 @@ const styles = {
   },
   content: {
     top: 0,
-
     right: 0,
+    bottom: 0
+  },
+  sidebar: {
+    zIndex: 2,
+    position: 'absolute',
+    top: 0,
     bottom: 0,
-
-    WebkitOverflowScrolling: 'touch',
-    transition: 'left .3s ease-out, right .3s ease-out'
+    transition: 'transform .3s ease-out',
+    willChange: 'transform',
+    overflowY: 'auto'
   }
 }
 
@@ -86,7 +91,7 @@ export default class SidebarMenu extends Component {
 
     return (
       <p key={prop}>
-        {prop}{' '}
+        {prop}
         <input type="number" onChange={setMethod} value={this.state[prop]} />
       </p>
     )
@@ -118,6 +123,7 @@ export default class SidebarMenu extends Component {
 
     return (
       <Side {...sidebarProps}>
+        {' '}
         <MaterialTitlePanel title={contentHeader}>
           <div style={styles.content} />
         </MaterialTitlePanel>

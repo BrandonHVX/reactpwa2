@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 export default function MenuBar() {
   return (
     <div id="nav">
+      {' '}
       <ul class="links">
         {' '}
         <Link to="/">

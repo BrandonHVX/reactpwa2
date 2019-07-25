@@ -3,7 +3,7 @@ import Page from './Page'
 import Home from './Page'
 import './sass/main.scss'
 import './css/main.css'
-
+import mdglogo from './images/mdgblack.png'
 import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 
 export default function Nav() {
@@ -11,8 +11,9 @@ export default function Nav() {
     <Router>
       <Nav>
         <div id="nav">
+          {' '}
+          <img src={mdglogo} />
           <ul class="links">
-            {' '}
             <Link to="/">
               {' '}
               <li>

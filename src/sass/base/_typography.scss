@@ -183,8 +183,7 @@
 			border-bottom-color: transparentize(_palette($p, fg), 0.5);
 
 			&:hover {
-				border-bottom-color: transparent;
-				color: _palette($p, accent) !important;
+			
 			}
 		}
 

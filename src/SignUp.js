@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './Nav.js'
 import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 import MenuBar from './MenuBar.js'
-export default function Page() {
+export default function Sign() {
   return (
     <div>
       <body class="is-preload">
