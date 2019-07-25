@@ -6,7 +6,7 @@ import Sidebar from './Sidebar.js'
 
 import { fadeIn } from 'react-animations'
 import styled, { keyframes } from 'styled-components'
-import mdglogo from './images/mdgblack.png'
+import mdglogo from './images/mdgblack.gif'
 const fadeInAni = keyframes`${fadeIn}`
 
 const FadeInDiv = styled.div`
