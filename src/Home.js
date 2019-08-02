@@ -3,6 +3,10 @@ import './sass/main.scss'
 import './css/main.css'
 import pic01 from './images/pic01.jpg'
 import bgwhite from './images/bgwhite.mp4'
+import music from './images/music-img.jpg'
+import film from './images/film-img.jpg'
+import mgmk from './images/mkmg-img.jpg'
+import shop from './images/shop-img.jpg'
 import mdglogo from './images/mdgblack.gif'
 import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom'
 import MenuBar from './MenuBar.js'
@@ -37,7 +41,6 @@ export default function Home() {
                   autoplay="true"
                   loop="true"
                   muted="true"
-                  type="video/mp4"
                 />
               </div>
               <div class="header-content">
@@ -46,26 +49,10 @@ export default function Home() {
             </header>
             <MenuBar />
             <div id="main" />
-            <img
-              class="homeimage"
-              src="https://source.unsplash.com/random"
-              alt="Example image"
-            />
-            <img
-              class="homeimage"
-              src="https://source.unsplash.com/random"
-              alt="Example image"
-            />
-            <img
-              class="homeimage"
-              src="https://source.unsplash.com/random"
-              alt="Example image"
-            />
-            <img
-              class="homeimage"
-              src="https://source.unsplash.com/random"
-              alt="Example image"
-            />
+            <img class="homeimage" src={music} alt="Example image" />
+            <img class="homeimage" src={film} alt="Example image" />
+            <img class="homeimage" src={mgmk} alt="Example image" />
+            <img class="homeimage" src={shop} alt="Example image" />
             <div id="copyright">
               <ul>
                 <li>&copy; Untitled</li>
